@@ -65,6 +65,120 @@
     gap: 6px;
 }
 
+#hero-section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 64px); /* Adjust height based on nav-bar height */
+    min-height: 580px; /* Minimum height for smaller screens */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    justify-content: center; /*Suspect*/
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* align content of element such as <img> or <video> directly in the horizontal and vertical center of its own container box */
+    z-index: -1;
+}
+
+/* #hero-section::after {} */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 560px;
+    padding: 0 64px;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 24px;
+}
+
+.hero-eyebrow {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.hero-title {
+    font-size: clamp(42px, 5vw, 72px); /* Responsive font size between 42px and 72px, as in clamp(minimum, preferred, maximum) */
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.hero-subtitle sup {
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 9999px; /* Signature Beats pill shape */
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #161616;
+    border: 2px solid #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #e6e6e6;
+    color: #161616;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    gap: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: lightcoral;
+    color: #161616;
+    transform: translateY(-2px);
+}
+
+/* Turns your red PNG icon pure white to match the text */
+.customize-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain; 
+    filter: brightness(0) invert(1) drop-shadow(0 0 0.5px #ffffff) drop-shadow(0 0 0.5px #ffffff);
+}
 
 
 
