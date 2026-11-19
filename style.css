@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NavBar Section Stylings*/
+#nav-bar{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#logo{
+    justify-self: start;
+    
+}
+
+#nav-links{
+    justify-self: center;
+    display: flex;
+    gap: 40px;
+}
+
+#nav-links a {
+    font-family: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    color: #161616;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#nav-links a:hover {
+    opacity:0.6;
+}
+
+#search-brief{
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#search-brief img{
+    cursor: pointer;
+}
+
+.pink-icon{
+    filter: invert(38%) sepia(100%) saturate(7490%) hue-rotate(330deg) brightness(103%) contrast(101%);
+    object-fit: contain;
+    width: 18px;
+    height: 18px;
+}
+.pink-text{
+    color: #E01B5D;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+/* Hero Section Stylings*/
+#hero-section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 64px); /* Adjust height based on nav-bar height */
+    min-height: 580px; /* Minimum height for smaller screens */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    justify-content: center; /*Suspect*/
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* align content of element such as <img> or <video> directly in the horizontal and vertical center of its own container box */
+    z-index: -1;
+}
+
+/* #hero-section::after {} */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 560px;
+    padding: 0 64px;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 24px;
+}
+
+.hero-eyebrow {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.hero-title {
+    font-size: clamp(42px, 5vw, 72px); /* Responsive font size between 42px and 72px, as in clamp(minimum, preferred, maximum) */
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.hero-subtitle sup {
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 9999px; /* Signature Beats pill shape */
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #161616;
+    border: 2px solid #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #e6e6e6;
+    color: #161616;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    gap: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: lightcoral;
+    color: #161616;
+    transform: translateY(-2px);
+}
+
+/* Turns your red PNG icon pure white to match the text */
+.customize-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain; 
+    filter: brightness(0) invert(1) drop-shadow(0 0 0.5px #ffffff) drop-shadow(0 0 0.5px #ffffff);
+}
+
+/* Kendall's favorites Stylings*/
+
+/* Main wrapper for Section 1 */
+#favorites-section {
+    padding: 64px 32px;
+    background-color: #f5f5f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Section Title */
+.section-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: #161616;
+    margin-bottom: 40px;
+}
+
+/* Places the 3 product cards side by side */
+.product-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap; /* Drops cards to the next line on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the whole row on the page */
+}
+
+/* Individual Card */
+.product-card {
+    background-color: white; /* Light gray Beats card background */
+    border-radius: 16px;
+    padding: 32px 24px;
+    width: 340px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Smoothly lifts the card on hover */
+}
+
+.product-card:hover {
+    transform: translateY(-6px); /* Moves the card slightly up when hovered */
+}
+
+/* Product Image */
+.product-img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain; /* Keeps the whole product visible without cropping */
+    margin-bottom: 20px;
+}
+
+/* Product Title & Price */
+.product-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #161616;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 16px;
+}
+
+/* Color Swatch Dots */
+.color-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%; /* Turns a square into a circle */
+    border: 1px solid #cccccc;
+}
+
+.dot.black { background-color: #161616; }
+.dot.cloud { background-color: #e8e6e1; }
+.dot.pink  { background-color: #f4b6c2; }
+.dot.sky   { background-color: #9ec5e8; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 834px) {
+    #nav-link{
+        display: none;
+    }
+}
