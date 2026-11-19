@@ -266,7 +266,72 @@
 .dot.sky   { background-color: #9ec5e8; }
 
 
+/* Gifts Banner Section Stylings */
+#gifts-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+    overflow: hidden;
+    font-family: "Open Sans", Arial, sans-serif;
+}
 
+/* Full-width background image */
+
+.gifts-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+}
+
+/* Text Content  & Button Box*/
+
+.gifts-content {
+    position: relative;
+    z-index: 2; /* Places the text on top of the image */
+    color: black;
+    padding: 0 32px ;
+    max-width: 600px;
+    margin-top: 330px;
+    margin-left: -630px;
+
+}
+
+.gifts-title {
+    font-size: 48px;
+    font-weight:800;
+    margin-bottom: 12px;
+}
+
+.gifts-subtitle {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+/* Pill Button */
+.btn-gifts {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 750;
+    text-decoration: none;
+    border-radius: 9999px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-gifts:hover {
+    background-color: #E01B5D;
+    color: black;
+}
 
 
 
